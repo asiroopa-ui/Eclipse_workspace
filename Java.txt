@@ -1,0 +1,649 @@
+By Id [id='header-form']
+by xpath //link[@rel='shortcut icon']
+by starts-with 
+by contains //button[contains(text(),'Accept')]
+by text//button[text()='Accept']
+by or //button[text()='Accept' or @aria-label='aria-label']
+by and method //button[text()='Accept' or @aria-label='aria-label']
+
+css selector 
+button#hs-eu-confirmation-button ------ for id we use #
+
+link.hs-banner-google-font------- for class name we use .
+
+by changing of the frame 
+driver.switchto().frame(byindex);
+driver.swicthto().frame(string name)
+driver.swtichto().frame(Webelements)
+
+
+alerts
+
+Alert alert =driver.swtichto().alert();
+driver.switchto().alert .accept()
+.dismiss();
+.sendkeys();
+.getText();
+
+
+driver.swtichto().window(windowID);
+for the right click of the webelemtn we use contextclick();
+
+
+Reverse Of String :
+
+1st Method
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        
+        String s="Roopa";
+        
+        for(int i=s.length()-1;i>=0;i--){
+            System.out.print(s.charAt(i));
+        }
+        System.out.println("Try programiz.pro");
+    }
+}
+
+2nd method
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        
+        String s="roopa";
+        
+        StringBuffer st = new StringBuffer(s);
+        String reverse = st.reverse().toString();
+        System.out.println(reverse);
+    }
+}
+
+
+
+Palindrome Number 
+
+
+
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        String s= "ama";
+        String reverse="";
+        for(int n =s.length()-1;n>=0;n--){
+            reverse += s.charAt(n);
+        }
+        
+        if(s.equalsIgnoreCase(reverse)){
+            System.out.println("It is an Palomdrom ");
+        }
+        else {
+            System.out.println("It is not an Palomdrm Number");
+        }
+        System.out.println(reverse);
+    }
+}
+
+
+
+Remove of duplicates
+
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+
+        int  a[] = {1, 2, 3, 4, 5, 6,8,9};
+        boolean b =false;
+        System.out.println("Duplicate elements:");
+        for (int i = 0; i < a.length; i++) {
+            for (int n = i + 1; n < a.length; n++) { 
+                if (a[i] == a[n]) {
+                    System.out.print(a[i]);
+                    b=true;
+                }
+            }
+        }
+        if(b==false){
+            System.out.println("Element not found");
+        }
+    }
+}
+
+
+using the hashset
+
+package shift;
+
+import java.util.LinkedHashSet;
+
+public class HashSet {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int a[] = {1,2,3,4,1,3,4};
+		LinkedHashSet<Integer> dup = new LinkedHashSet<Integer>();
+		
+//		
+//		dup.add(2);
+//		dup.add(3);
+//		dup.add(3);
+//		dup.add(1);
+//		
+		for(int value : a) {
+			if(dup.add(value)==false) {
+				System.out.print("Duplicate found" +value);
+			}
+			
+//			System.out.println(value);
+		}
+
+	}
+
+}
+
+
+Occurance of each character
+
+
+
+
+String s="roopa";
+		
+		LinkedHashMap<Character,Integer> map = new LinkedHashMap<Character,Integer>();
+		
+		char[] sc = s.toCharArray();
+		
+		for(char c:sc) {
+			
+			if(!map.containsKey(c)) {
+				map.put(c, 1);	
+			}else {
+				int value=map.get(c);
+				map.put(c, value+1);
+				
+			}
+			
+		}
+	    System.out.println(map);
+		
+       }
+
+
+
+Prime Numbers 
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        int n=5;
+        int count=0;
+      for(int i=1;i<=n;i++){
+            if(n%i==0){
+                count++;
+            }
+      }
+      if(count==2){
+          System.out.println("it is an prime number ");
+      }else{
+          System.out.println("It is not an prime number");
+      }
+      
+    }
+}
+
+EVEN OR ODD NUMBERS
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        int n=1;
+        
+        if(n%2==0){
+            System.out.println("it is an even number");
+            
+        }else{
+            System.out.println("it is an odd number");
+        }
+        
+    }
+}
+
+
+Highest Number 
+
+
+
+class Main {
+    public static void main(String[] args) {
+      int a[]={1,2,3,4,5,6};
+      int max =a[0];
+      
+      for(int i=0;i<a.length;i++){
+          if(a[i]>max){
+              max=a[i];
+          }
+      }
+      System.out.println(max);
+    }
+}
+	
+
+
+
+Second highest number 
+class Main {
+    public static void main(String[] args) {
+      int a[]={1,2,3,4,5,6,55};
+      int max =a[0];
+1      int smax=0;
+      for(int i=0;i<a.length;i++){
+          if(a[i]>max){
+              smax=max;
+              max=a[i];
+             
+          }else if(a[i]!=max && a[i]>smax){
+              smax=a[i];
+          }
+               
+      }
+      System.out.println(smax);
+    }
+}
+
+
+
+
+*********postive first and negatives at the last ******************
+
+
+
+
+
+From <https://teams.microsoft.com/v2/> 
+
+***********palomdrom number ***************
+
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        
+        String r="madam";
+        char[] rs=r.toCharArray();
+        String re="";
+        for (int i=rs.length-1;i>=0;i--){
+            re+=rs[i];
+        }
+        if(r.equals(re)){
+            System.out.println("it is parlodrom ");
+        }else{
+            System.out.println("it is not an parlodrom");
+        }
+    }
+}
+
+
+
+*****************finding of length without inbuild methods *****************
+
+
+
+String s="madam";
+     int count=0;
+     char[] ch=s.toCharArray();
+     for(char c:ch)
+     {
+       count++;
+     }
+     System.out.println(s.length()+" "+count);
+
+*********************Write a program to find vowels in each word and count them.**************
+
+
+
+public static void main(String[] args) {
+ 
+// Q. Write a program to find vowels in each word and count them.
+        String st2 = "Capgemini India.";
+        int count=0;
+        String[] words = st2.split(" ");
+ 
+        for (String word : words) {
+            char[] arrCh = word.toCharArray();
+            Map<Character,Integer> map = new HashMap<>();
+            for (char ch : arrCh) {
+                if(map.containsKey(ch)) {
+                    map.put(ch, map.get(ch)+1);
+                }else{
+                    map.put(ch,1);
+                }
+            }
+            System.out.println(word +" : has ");
+            map.forEach((k,v)->{
+                if(k=='a' ||k=='e' ||k=='i'||k=='o'||k=='u'||k=='A'
+                        ||k=='E'||k=='I'||k=='O'||k=='U'){
+                    System.out.println(k+" = "+v);
+                }
+            });
+ 
+        }
+ 
+}
+
+
+Javascriptexceutor scroll bars 
+screenshot 
+
+
+//paldrom in a string 
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        String[] a ={"ada", "swa" , "mem"};
+        for(int i=0;i<=a.length-1;i++){
+            String b=a[i];
+            String rev="";
+            for(int j=b.length()-1;j>=0;j--){
+                rev=rev+b.charAt(j);
+                
+                if(b.equals(rev)){
+                    System.out.println("it is an palamdrom number" +b);
+                }
+            }
+        }
+    }
+}
+
+
+
+class Main {
+    public static void main(String[] args) {
+        String s = "hello java world";
+        String[] words = s.split(" ");
+        String output = "";
+        for (int i = 0; i < words.length; i++) {
+            char[] ch = words[i].toCharArray();
+            String rev = "";
+            for (int j = ch.length - 1; j >= 0; j--) {
+                rev = rev + ch[j];
+            }
+            output = output + rev + " ";
+        }
+        System.out.println(output.trim());
+    }
+}
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+Find the type of the charcter 
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Start small. Ship something.");
+        
+        String r="wbaduyweguwe190238923!@!@#!";
+        char ch[]=r.toCharArray();
+        for(int i=0;i<ch.length;i++){
+            if((ch[i]>='a' && ch[i]<='z') || ch[i]>='A'&& ch[i]<='Z'){
+                System.out.println(ch[i] +"-->alphabets");
+            }else if(ch[i]>='1' && ch[i]<='9'){
+                System.out.println(ch[i] +"-->Numbers");
+                
+            }else {
+                  System.out.println(ch[i] +"-->special character");  
+            }
+        }
+    }
+}
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+finding vowels in string 
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Start small. Ship something.");
+        String s="jabdcwieafbzdscjkb";
+        
+      char[] sc=s.toCharArray();
+      LinkedHashMap<Character,Integer> map=new LinkedHashMap<>();
+      for(char m:sc){
+          if(m =='a'|| m =='e'||m =='i'||m =='o'||m =='u'||m =='A'||m =='E'||m =='I'||m =='O'||m =='U' ){
+              if(!map.containsKey(m)){
+                  map.put(m,1);
+                      
+                  }else {
+                      int value=map.get(m);
+                      map.put(m,value+1);
+                  }
+              }
+          }
+          System.out.println(map);
+      }
+      
+      
+    }
+
+Reverse of Each Word 
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+//reverse of each word 
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Start small. Ship something.");
+        String s="my name is roopa";
+        String[] a=s.split(" ");
+        String reverse ="";
+        String word=a[3];
+        System.out.print(a[0]+" "+a[1]+" "+a[2]+" ");
+        
+      
+            for(int i=word.length()-1;i>=0;i--){
+                reverse+=word.charAt(i);
+            }
+        
+        System.out.print(reverse);
+        
+    }
+}
+
+largest and smallest number 
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Start small. Ship something.");
+   int[] arr={1,62,2,4,5,1,34};
+   int largest=arr[0];
+   int smallest=arr[0];
+   
+   for(int i=0;i<arr.length;i++){
+     
+       
+           if(largest<arr[i]){
+               largest=arr[i];
+           }else if(smallest>arr[i]){
+               smallest=arr[i];
+           }
+       
+       
+   }
+   System.out.println(largest);
+   System.out.println(smallest);
+        
+    }
+}
+
+//second largest 
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Start small. Ship something.");
+        int a[]={1,2,3,1,2,3,1,2};
+        int largest =a[0];
+        int slargest=a[0];
+        
+        for(int i=0;i<a.length;i++){
+            if(largest<a[i]){
+                slargest=largest;
+                largest =a[i];
+            }else if(a[i] < largest && a[i] != largest){
+                slargest=a[i];
+                
+            }
+        }
+        System.out.println("second largest" +slargest);
+        System.out.println("largest number" +largest);
+    }
+}
+
+//third largest value 
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Start small. Ship something.");
+        int a[]={9,10,12,3,1,1,3,1,2,1,2,146,6,7,5};
+        int max=a[0];
+        int smax=a[1];
+        int tmax=a[2];
+        
+        for(int i=0;i<a.length;i++){
+            if(a[i]>max){
+                tmax=smax;
+                smax=max;
+                max=a[i];
+            }else if(a[i] > smax && a[i] < smax){
+                tmax=smax;
+                smax=a[i];
+            }else if(a[i] >tmax && a[i] !=smax && a[i] !=max){
+                tmax=a[i];
+            }
+        }
+        System.out.println(tmax);
+        System.out.println(max);
+        System.out.println(smax);
+    }
+}
+
+String methods 
+
+charAt ()--- method 
+StringBuffer --- class
+toString()
+.equals() --- is used to compare the string 
+.equalsIgnoreCase() --- is used to compare the stirng but ignore the upper and lower cases 
+
+
+.get()
+
+.keySet()
+.keyValue()
+.replace()
+
+.put()
+.get()
+.containsKey()
+.toCharArray()
+
+
+
+🔹 String & Array Manipulation
+1. Reverse a String
+Write a method to reverse a string without using built-in reverse methods.
+2. Check for Palindrome
+Determine if a given string is a palindrome.
+3. Find Duplicate Elements in an Array
+Return all duplicate elements from an array of integers or strings.
+4. Count Occurrences of Each Character in a String
+Use a Map<Character, Integer> to count character frequency.
+
+🔹 Collections & Data Structures
+5. Sort a List of Strings by Length
+Use Collections.sort() with a custom comparator.
+6. Remove Duplicates from a List
+Convert to a Set or use Java 8 stream().distinct().
+7. Find the First Non-Repeating Character in a String
+Use a LinkedHashMap to preserve insertion order.
+
+🔹 Java 8 Features
+8. Use Stream API to Filter and Collect Data
+Example: Filter even numbers from a list and collect them into a new list.
+9. Use Lambda Expressions for Sorting
+Sort a list of custom objects using lambda expressions.
+
+🔹 File Handling
+10. Read a File Line by Line
+Use BufferedReader or Files.lines() from Java 8.
+11. Write Data to a File
+Use BufferedWriter or Files.write().
+
+From <https://m365.cloud.microsoft/chat/?fromcode=cmc&redirectid=56FEB33CC2534B14ADB0C5F8131AB3DA&auth=2&internalredirect=CCM> 
+
+
+
+12. Reverse string 
+13. Palindrome 
+14. Count characters using HashMap 
+15. Find duplicates in array 
+16. Second largest number 
+17. Array sorting 
+18. Stream API basic programs 
+
+From <https://4d7706ee.isolation.zscaler.com/profile/24b8ab0a-59a4-42c6-bc94-23342a75840c/zia-session/?controls_id=73e59df3-2ea5-416b-b373-06ce8f97e96a&region=hyd&tenant=ce753994dc24&user=05a4f6a33edc9fbfcf473c0395fe89bc359d71eb38058a1b9ef517ebef972625&original_url=https%3A%2F%2Fchatgpt.com%2F&key=sh-1&hmac=40355ab4c2fc98ca2c8a0c917349eccfe4899d0547b7f1061abac25664b429d4> 
+
+	
+1. What is Cucumber?
+Cucumber is a Behavior-Driven Development (BDD) testing tool that allows you to write test cases in plain English using Gherkin language.
+
+What is Gherkin?
+Gherkin is a human-readable language used in Cucumber to write test scenarios.
+It uses keywords like:
+	• Given
+	• When
+	• Then
+	• And
+	• But
+
+Given I am on the login page
+When I enter valid credentials
+Then I should see the dashboard
+
+What is a Feature File?
+A Feature File is where you write test cases (scenarios) in Gherkin format.
+File extension: .feature
+
+Feature: Login Feature
+  Scenario: Successful login
+    Given user launches the app
+    When user logs in with valid credentials
+    Then user is redirected to the dashboard
